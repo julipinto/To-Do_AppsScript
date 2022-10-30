@@ -39,11 +39,10 @@ body = {
 POST {baseurl}?q=modfyTask
 
 ```typescript
-  // You have to provide either task, status, or both to be edited
-  body = {
-    id: "TASK ID"
-    task?: "TASK DESCRIPTION",
-    status?: "PENDING" | "DONE" | "ANOTHER"
-  }
-
+// You have to provide either task, status, or both to be edited
+body = {
+  id: 'TASK ID',
+  task: 'TASK DESCRIPTION',
+  status: 'PENDING' | 'DONE' | 'ANOTHER',
+};
 ```
