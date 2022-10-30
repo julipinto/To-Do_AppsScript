@@ -20,25 +20,25 @@ Apps script just provide two main routes to be accessed, doGet and doPost. Conse
 
 POST {baseurl}?q=insertTask
 
-```json
-  body = {
-    task: "TASK DESCRIPTION",
-    status: "PENDING" | "DONE" | "ANOTHER"
-  }
+```typescript
+body = {
+  task: 'TASK DESCRIPTION',
+  status: 'PENDING' | 'DONE' | 'ANOTHER',
+};
 ```
 
 POST {baseurl}?q=getTask
 
-```json
-  // The task can be filtered by the status
-  body = {
-    filter?: "PENDING" | "DONE" | "ANOTHER"
-  }
+```typescript
+// The task can be filtered by the status
+body = {
+  filter: 'PENDING' | 'DONE' | 'ANOTHER',
+};
 ```
 
 POST {baseurl}?q=modfyTask
 
-```json
+```typescript
   // You have to provide either task, status, or both to be edited
   body = {
     id: "TASK ID"
