@@ -14,7 +14,7 @@ as we can see in the image
 
 ## Router
 
-Apps script just provide two main routes to be accessed, doGet and doPost. Consequently we have a hard coded router, where the routes is passed by the param "q"
+Apps script just provide two main routes to be accessed, doGet and doPost. Consequently, I have a hard coded router (Node.js axios inspired) to increase the quantity of routes we can access. with that setted, the routes are accessed by passed by the param "q"
 
 ### Routes
 
@@ -39,7 +39,7 @@ body = {
 POST {baseurl}?q=modfyTask
 
 ```typescript
-// You have to provide either task, status, or both to be edited
+// You have to provide either task, status, or both to be edited. The id is mandatory.
 body = {
   id: 'TASK ID',
   task: 'TASK DESCRIPTION',
